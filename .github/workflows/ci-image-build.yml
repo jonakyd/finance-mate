@@ -28,9 +28,12 @@ jobs:
         with:
           images: ${{ github.repository }}/ci-image
 
+      - name: Create annotation for build error
+        run: pwd
+
       - name: Build and Push Docker Image
         uses: docker/build-push-action@v5
         with:
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
-          file: ciImageBuild/Dockerfile
+          context: ciImageBuild
