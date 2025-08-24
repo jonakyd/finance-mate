@@ -14,7 +14,7 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
         with:
-          lfs: "true"
+          lfs: true
 
       - name: Login to GitHub Container Registry
         uses: docker/login-action@v3
@@ -28,12 +28,10 @@ jobs:
         with:
           images: ${{ github.repository }}/ci-image
 
-      - name: Create annotation for build error
-        run: pwd
-
       - name: Build and Push Docker Image
         uses: docker/build-push-action@v5
         with:
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
           context: ciImageBuild
+          push: true
