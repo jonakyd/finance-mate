@@ -29,6 +29,9 @@ jobs:
         with:
           images: ${{ github.repository }}/ci-image
 
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
       - name: Build and Push Docker Image
         uses: docker/build-push-action@v5
         with:
