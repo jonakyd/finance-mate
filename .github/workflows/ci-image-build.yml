@@ -25,6 +25,7 @@ jobs:
 
       - name: Extract Docker Metadata
         uses: docker/metadata-action@v5
+        id: meta
         with:
           images: ${{ github.repository }}/ci-image
 
