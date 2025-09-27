@@ -3,7 +3,8 @@
 {
   "name": "finance-mate",
   // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-  "image": "ghcr.io/jonakyd/finance-mate/ci-image:main",
+  // "image": "ghcr.io/jonakyd/finance-mate/ci-image:main",
+  "image": "myimage:latest",
 
   // Features to add to the dev container. More info: https://containers.dev/features.
   // "features": {},
@@ -20,11 +21,17 @@
       "extensions": [
         "esbenp.prettier-vscode",
         "dbaeumer.vscode-eslint",
-        "vitest.explorer"
+        "vitest.explorer",
+        "arcanis.vscode-zipfs"
       ]
     }
   },
 
   // Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
-  "remoteUser": "pwuser"
+  "remoteUser": "pwuser",
+
+  "mounts": [
+    "source=${localEnv:HOME}/.zshrc,target=/home/pwuser/.zshrc,type=bind,consistency=cached",
+    "source=${localEnv:HOME}/.p10k.zsh,target=/home/pwuser/.p10k.zsh,type=bind,consistency=cached"
+  ]
 }
