@@ -22,7 +22,8 @@
         "esbenp.prettier-vscode",
         "dbaeumer.vscode-eslint",
         "vitest.explorer",
-        "arcanis.vscode-zipfs"
+        "arcanis.vscode-zipfs",
+        "ms-playwright.playwright"
       ]
     }
   },
