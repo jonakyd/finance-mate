@@ -6,6 +6,7 @@ import reactHooks from "eslint-plugin-react-hooks";
 import reactRefresh from "eslint-plugin-react-refresh";
 import prettier from "eslint-config-prettier/flat";
 import vitest from "@vitest/eslint-plugin";
+import globals from "globals";
 
 export default defineConfig(
   eslint.configs.recommended,
@@ -14,7 +15,7 @@ export default defineConfig(
   react.configs.flat.recommended,
   react.configs.flat["jsx-runtime"],
   reactHooks.configs.flat.recommended,
-  reactRefresh.configs.recommended,
+  reactRefresh.configs.vite,
   prettier,
   {
     files: ["**/*.vitest.ts", "**/*.vitest.tsx"],
@@ -22,6 +23,8 @@ export default defineConfig(
   },
   {
     languageOptions: {
+      ecmaVersion: 2022,
+      globals: { ...globals.browser, ...globals.node },
       parserOptions: {
         // Enable parsing of modern ECMAScript features and include global config files
         projectService: {
@@ -33,5 +36,8 @@ export default defineConfig(
       // React version detection for eslint-plugin-react
       react: { version: "detect" },
     },
-  }
+    rules: {
+      "@typescript-eslint/consistent-type-definitions": ["error", "type"],
+    },
+  },
 );

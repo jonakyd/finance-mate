@@ -1,3 +1,5 @@
+.pnp.cjs
+.pnp.loader.mjs
 node_modules
 __screenshots__
 playwright/.auth

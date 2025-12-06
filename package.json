@@ -1,5 +1,6 @@
 {
   "name": "finance-mate",
+  "private": true,
   "version": "1.0.0",
   "packageManager": "yarn@4.9.3+sha512.8295ee814f6b253e16f516416481b481a215ed03ef1ae38524d108084872560a9ed75aeb23b91ab64222062ac4149a594150ae538c2a9536fdbcefd4e49b11cc",
   "engines": {
@@ -8,7 +9,7 @@
   "type": "module",
   "scripts": {
     "test": "vitest",
-    "quality:typecheck": "tsc --noEmit",
+    "quality:fsd": "steiger apps/frontend/src --fail-on-warnings",
     "quality:eslint": "eslint .",
     "quality:prettier": "NODE_OPTIONS=\"--experimental-strip-types\" prettier . --check --no-editorconfig"
   },
@@ -21,13 +22,13 @@
   },
   "devDependencies": {
     "@eslint/js": "~9.39.1",
+    "@feature-sliced/steiger-plugin": "^0.5.7",
     "@tsconfig/strictest": "~2.0.5",
     "@tsconfig/vite-react": "~7.0.2",
     "@types/node": "~22.13.4",
     "@types/react": "~19.2.2",
     "@types/react-dom": "~19.2.2",
     "@vitest/browser": "~3.2.4",
-    "@vitest/eslint-plugin": "~1.5.1",
     "@yarnpkg/types": "~4.0.1",
     "eslint": "~9.39.1",
     "eslint-config-prettier": "~10.1.8",
@@ -35,8 +36,10 @@
     "eslint-plugin-react-hooks": "~7.0.1",
     "eslint-plugin-react-refresh": "~0.4.24",
     "eslint-plugin-vitest": "~0.5.4",
+    "globals": "^16.5.0",
     "playwright": "~1.56.1",
     "prettier": "~3.6.2",
+    "steiger": "^0.5.11",
     "typescript": "~5.3.3",
     "typescript-eslint": "~8.48.1",
     "vitest": "~3.2.4"
