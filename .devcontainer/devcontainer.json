@@ -27,10 +27,7 @@
       ]
     }
   },
-
-  // Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
   "remoteUser": "pwuser",
-
   "mounts": [
     "source=${localEnv:HOME}/.zshrc,target=/home/pwuser/.zshrc,type=bind,consistency=cached",
     "source=${localEnv:HOME}/.p10k.zsh,target=/home/pwuser/.p10k.zsh,type=bind,consistency=cached"
