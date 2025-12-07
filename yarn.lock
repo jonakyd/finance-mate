@@ -1589,13 +1589,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tsconfig/node22@npm:~22.0.2":
-  version: 22.0.5
-  resolution: "@tsconfig/node22@npm:22.0.5"
-  checksum: 10c0/c64b1d51e1556da9212463799f5096289d2cc8561eaed10cd0a0a36c25790b4c6bed30c0f846afccf8da75b5750326fa281216a908c2b67ead7b55adaf3eda22
-  languageName: node
-  linkType: hard
-
 "@tsconfig/strictest@npm:~2.0.5":
   version: 2.0.8
   resolution: "@tsconfig/strictest@npm:2.0.8"
@@ -1912,7 +1905,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vitejs/plugin-react@npm:^5.0.0":
+"@vitejs/plugin-react@npm:^5.1.1":
   version: 5.1.1
   resolution: "@vitejs/plugin-react@npm:5.1.1"
   dependencies:
@@ -2644,14 +2637,6 @@ __metadata:
   checksum: 10c0/1c1703be4f02a250b1d6ca3267e408ce16abfe8364193891afc94c2d5c060b69611fdc8d97af74b7e6d5d1aac0ab2fb94d6b079573146bc2d756c2484ce5f0ee
   languageName: node
   linkType: hard
-
-"crawler@workspace:apps/crawler":
-  version: 0.0.0-use.local
-  resolution: "crawler@workspace:apps/crawler"
-  dependencies:
-    "@tsconfig/node22": "npm:~22.0.2"
-  languageName: unknown
-  linkType: soft
 
 "cross-spawn@npm:^7.0.6":
   version: 7.0.6
@@ -3562,13 +3547,16 @@ __metadata:
   dependencies:
     "@eslint/js": "npm:~9.39.1"
     "@feature-sliced/steiger-plugin": "npm:^0.5.7"
+    "@tanstack/react-query": "npm:^5.85.5"
     "@tsconfig/strictest": "npm:~2.0.5"
     "@tsconfig/vite-react": "npm:~7.0.2"
     "@types/node": "npm:~22.13.4"
     "@types/react": "npm:~19.2.2"
     "@types/react-dom": "npm:~19.2.2"
+    "@vitejs/plugin-react": "npm:^5.1.1"
     "@vitest/browser": "npm:~3.2.4"
     "@yarnpkg/types": "npm:~4.0.1"
+    antd: "npm:^6.0.1"
     eslint: "npm:~9.39.1"
     eslint-config-prettier: "npm:~10.1.8"
     eslint-plugin-react: "npm:~7.37.5"
@@ -3576,6 +3564,8 @@ __metadata:
     eslint-plugin-react-refresh: "npm:~0.4.24"
     eslint-plugin-vitest: "npm:~0.5.4"
     globals: "npm:^16.5.0"
+    openapi-fetch: "npm:^0.15.0"
+    openapi-react-query: "npm:^0.5.0"
     playwright: "npm:~1.56.1"
     prettier: "npm:~3.6.2"
     react: "npm:~19.2.0"
@@ -3583,7 +3573,10 @@ __metadata:
     steiger: "npm:^0.5.11"
     typescript: "npm:~5.3.3"
     typescript-eslint: "npm:~8.48.1"
+    uuid: "npm:^13.0.0"
+    vite: "npm:^7.1.2"
     vitest: "npm:~3.2.4"
+    zustand: "npm:^5.0.9"
   languageName: unknown
   linkType: soft
 
@@ -3622,23 +3615,6 @@ __metadata:
   checksum: 10c0/0e0b50f6a843a282637d43674d1fb278dda1dd85f4f99b640024cfb10b85058aac0cc781bf689d5fe50b4b7f638e91e548560723a4e76e04fe96ae35ef039cee
   languageName: node
   linkType: hard
-
-"frontend@workspace:apps/frontend":
-  version: 0.0.0-use.local
-  resolution: "frontend@workspace:apps/frontend"
-  dependencies:
-    "@tanstack/react-query": "npm:^5.85.5"
-    "@tsconfig/vite-react": "npm:~7.0.2"
-    "@vitejs/plugin-react": "npm:^5.0.0"
-    antd: "npm:^6.0.1"
-    openapi-fetch: "npm:^0.15.0"
-    openapi-react-query: "npm:^0.5.0"
-    react: "npm:^19.1.1"
-    react-dom: "npm:^19.1.1"
-    uuid: "npm:^13.0.0"
-    vite: "npm:^7.1.2"
-  languageName: unknown
-  linkType: soft
 
 "fs-minipass@npm:^3.0.0":
   version: 3.0.3
@@ -5298,7 +5274,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-dom@npm:^19.1.1, react-dom@npm:~19.2.0":
+"react-dom@npm:~19.2.0":
   version: 19.2.1
   resolution: "react-dom@npm:19.2.1"
   dependencies:
@@ -5337,7 +5313,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react@npm:^19.1.1, react@npm:~19.2.0":
+"react@npm:~19.2.0":
   version: 19.2.1
   resolution: "react@npm:19.2.1"
   checksum: 10c0/2b5eaf407abb3db84090434c20d6c5a8e447ab7abcd8fe9eaf1ddc299babcf31284ee9db7ea5671d21c85ac5298bd632fa1a7da1ed78d5b368a537f5e1cd5d62
@@ -6637,5 +6613,26 @@ __metadata:
   version: 3.25.76
   resolution: "zod@npm:3.25.76"
   checksum: 10c0/5718ec35e3c40b600316c5b4c5e4976f7fee68151bc8f8d90ec18a469be9571f072e1bbaace10f1e85cf8892ea12d90821b200e980ab46916a6166a4260a983c
+  languageName: node
+  linkType: hard
+
+"zustand@npm:^5.0.9":
+  version: 5.0.9
+  resolution: "zustand@npm:5.0.9"
+  peerDependencies:
+    "@types/react": ">=18.0.0"
+    immer: ">=9.0.6"
+    react: ">=18.0.0"
+    use-sync-external-store: ">=1.2.0"
+  peerDependenciesMeta:
+    "@types/react":
+      optional: true
+    immer:
+      optional: true
+    react:
+      optional: true
+    use-sync-external-store:
+      optional: true
+  checksum: 10c0/552849e4546c7760704d6509a5c412d57c62a1fa9e53169c939ba5e3d75f8cb3df50a64c3a22e6c3f1c8cc00de7543e4edd61ab5ae0c9169ba9a98e28303aba6
   languageName: node
   linkType: hard
